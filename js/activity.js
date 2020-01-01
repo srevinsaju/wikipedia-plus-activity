@@ -8,5 +8,19 @@ define(function (require) {
         activity.setup();
 
     });
+    
+    document.getElementById("stop-button").addEventListener('click', function (event) {
+        console.log("writing...");
+        var jsonData = JSON.stringify(pawns);
+        activity.getDatastoreObject().setDataAsText(jsonData);
+        activity.getDatastoreObject().save(function (error) {
+            if (error === null) {
+                console.log("write done.");
+            } else {
+                console.log("write failed.");
+            }
+        });
+    });
+    
 
 });
