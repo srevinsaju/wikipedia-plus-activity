@@ -1,0 +1,3 @@
+[submodule "kiwix"]
+	path = kiwix
+	url = https://github.com/srevinsaju/kiwix
